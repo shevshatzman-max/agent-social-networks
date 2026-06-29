@@ -1,0 +1,12 @@
+# Netlify config — this site is plain static files, no build step.
+# Connect this repo in the Netlify UI (New site → Import from Git) and it will
+# publish on every push, including the daily-refresh commit from GitHub Actions.
+
+[build]
+  publish = "."
+  command = ""   # nothing to build; index.html + data.json are served as-is
+
+[[headers]]
+  for = "/data.json"
+  [headers.values]
+    Cache-Control = "public, max-age=300"   # don't over-cache the daily data

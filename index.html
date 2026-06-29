@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consumer & Social Agent Networks — Deep Dive</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js"></script>
+<style>
+:root{ color-scheme: light;
+  --bg:#f6f7f9; --card:#ffffff; --ink:#15181d; --muted:#5b6472; --line:#e6e9ef;
+  --accent:#3b5bdb; --up:#1a9d5a; --down:#d9480f; --flat:#7048e8; --dead:#868e96; --chip:#eef1f7;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 20px 60px;}
+header h1{font-size:27px;margin:0 0 6px;letter-spacing:-.01em}
+header .sub{color:var(--muted);font-size:14px;margin-bottom:4px;max-width:760px}
+header .date{color:var(--muted);font-size:12.5px}
+.note{background:#fff7ed;border:1px solid #ffd8a8;border-radius:10px;padding:12px 14px;margin:18px 0 8px;font-size:13px;color:#7c4a12}
+section.block{margin-top:30px}
+h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 14px;font-weight:600}
+.chartbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 8px;height:360px;position:relative}
+.chartcap{color:var(--muted);font-size:12px;margin:8px 2px 0}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 16px}
+.filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:7px 13px;border-radius:999px;font-size:13px;cursor:pointer;transition:.15s}
+.filters button:hover{border-color:var(--accent)}
+.filters button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 14px;transition:.15s;align-self:start}
+.card .head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;cursor:pointer}
+.card h3{margin:0;font-size:18px;letter-spacing:-.01em}
+.card .tag{font-size:11.5px;color:var(--muted);margin-top:2px}
+.badge{font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;white-space:nowrap;letter-spacing:.02em}
+.b-up{background:#e6f7ee;color:var(--up)} .b-down{background:#fdece2;color:var(--down)}
+.b-flat{background:#efe9fd;color:var(--flat)} .b-dead{background:#eef0f2;color:var(--dead)}
+.b-acq{background:#e7f0ff;color:var(--accent)}
+.metric{margin:12px 0 6px}
+.metric .big{font-size:22px;font-weight:700;letter-spacing:-.02em}
+.metric .lbl{font-size:12px;color:var(--muted)}
+.oneline{font-size:13.5px;color:var(--ink);margin:8px 0 0}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;font-size:12.5px;margin-top:10px}
+.kv b{color:var(--muted);font-weight:600;white-space:nowrap}
+.detail{display:none;margin-top:14px;border-top:1px solid var(--line);padding-top:6px}
+.card.open .detail{display:block}
+.detail h4{margin:14px 0 4px;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.detail p{margin:4px 0;font-size:13.5px}
+.detail ul{margin:4px 0;padding-left:18px;font-size:13.5px}
+.detail li{margin:3px 0}
+.tl{list-style:none;padding:0;margin:6px 0}
+.tl li{position:relative;padding:0 0 8px 16px;font-size:13px;border-left:2px solid var(--line);margin-left:4px}
+.tl li:before{content:"";position:absolute;left:-5px;top:5px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.tl li b{color:var(--ink)}
+.conf{font-size:12px;color:var(--muted);font-style:italic;margin-top:8px;background:var(--chip);padding:8px 10px;border-radius:8px}
+.srcs{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.srcs a{font-size:11.5px;background:var(--chip);color:var(--accent);text-decoration:none;padding:3px 8px;border-radius:6px;border:1px solid var(--line)}
+.srcs a:hover{background:#e3e8f5}
+.expand{font-size:11.5px;color:var(--accent);margin-top:10px;cursor:pointer;user-select:none}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);margin:4px 0 0}
+footer{margin-top:36px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:16px}
+.tierhead{font-size:12.5px;color:var(--muted);margin:22px 0 10px;font-weight:600}
+.takeaway{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:14px 16px;margin-top:14px;font-size:13.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Consumer &amp; Social Agent Networks — Deep Dive</h1>
+  <div class="sub">A learn-in-depth field guide to platforms where AI agents post, talk, and socialise: agent counts, momentum, founders, history, how they work, culture, and what each tells us about the agentic social network thesis.</div>
+  <div class="date" id="dateline">Loading…</div>
+</header>
+
+<div class="note">⚠️ <b>Numbers move fast and are mostly self-reported.</b> Agent counts conflate bots-per-human, crypto incentives, and one-off registrations. Each card carries a confidence note and dates; re-verify any single figure before external use.</div>
+
+<section class="block">
+  <h2 class="sec">Scale at a glance — reported agents / users (log scale)</h2>
+  <div class="chartbox"><canvas id="scaleChart"></canvas></div>
+  <div class="chartcap">Mixed units (agents vs MAU vs characters) — bars coloured by momentum. Moltbook &amp; Fetch.ai counts are inflated by multi-agent-per-human + crypto incentives; Chirper's 65k is a stale early-2025 academic snapshot; The Colony is small but real and live.</div>
+  <div class="legend" style="margin-top:10px">
+    <span><b style="color:var(--up)">▲ Growing</b></span><span><b style="color:var(--down)">▼ Declining</b></span>
+    <span><b style="color:var(--flat)">◆ Flat / repositioning</b></span><span><b style="color:var(--dead)">■ Dormant / wound down</b></span>
+    <span><b style="color:var(--accent)">★ Acquired</b></span>
+  </div>
+</section>
+
+<section class="block">
+  <h2 class="sec">The six from Thursday's deck</h2>
+  <div class="filters" id="filters">
+    <button data-f="all" class="active">All</button>
+    <button data-f="up">▲ Growing</button><button data-f="down">▼ Declining</button>
+    <button data-f="flat">◆ Flat / repositioning</button><button data-f="dead">■ Dormant / wound down</button>
+    <button data-f="acq">★ Acquired</button>
+  </div>
+  <div class="grid" id="coreGrid"></div>
+</section>
+
+<section class="block">
+  <h2 class="sec">Notable other entrants (not in the deck)</h2>
+  <div class="tierhead">Tier 1 — directly on-thesis (agents socialise with each other)</div>
+  <div class="grid" id="t1Grid"></div>
+  <div class="tierhead">Tier 2 — mass-scale AI-companion social apps (adjacent)</div>
+  <div class="grid" id="t2Grid"></div>
+  <div class="takeaway">
+    <b>The pattern across all of them.</b> Pure agent-only feeds (Chirper, Moltbook) go viral on novelty, then collapse, get acqui-hired, or fragment — and authenticity ("is a human posting as the bot?") is the recurring scandal. Agent+human hybrids that solve for <b>identity, reputation and verification</b> (The Colony's whole culture is agents arguing about exactly this) are smaller but stickier. The real consumer money is still in <b>1:1 companion apps</b> (Character.AI, MiniMax's Talkie/Xingye, Replika, Grok's Ani), where Character.AI is the one incumbent explicitly trying to cross into agent-to-agent social via its AI-native feed. Capability has outpaced accountability: the plumbing works, trust does not yet.
+  </div>
+</section>
+
+<footer id="footer"></footer>
+</div>
+
+<script>
+const COLOR={up:"#1a9d5a",down:"#d9480f",flat:"#7048e8",dead:"#868e96",acq:"#3b5bdb"};
+function cardHTML(p){
+  const kv=p.kv?`<div class="kv">${p.kv.map(r=>`<b>${r[0]}</b><span>${r[1]}</span>`).join("")}</div>`:"";
+  const secs=(p.sections||[]).map(s=>`<h4>${s[0]}</h4>${s[1]}`).join("");
+  return `<div class="card" data-trend="${p.trend}" data-id="${p.id}">
+    <div class="head"><div><h3>${p.name}</h3><div class="tag">${p.tag}</div></div>
+      <div class="badge ${p.bcls}">${p.badge}</div></div>
+    <div class="metric"><div class="big">${p.big}</div><div class="lbl">${p.lbl}</div></div>
+    <div class="oneline">${p.oneline}</div>${kv}
+    <div class="expand">▾ Full deep dive &amp; sources</div>
+    <div class="detail">${secs}<p class="conf">${p.conf}</p>
+      <h4>Sources</h4><div class="srcs">${p.srcs.map(s=>`<a href="${s[1]}" target="_blank" rel="noopener">${s[0]} ↗</a>`).join("")}</div>
+    </div></div>`;
+}
+function render(list,el){ document.getElementById(el).innerHTML=list.map(cardHTML).join(""); }
+
+fetch('./data.json?v='+Date.now()).then(r=>r.json()).then(DATA=>{
+  document.getElementById('dateline').innerHTML='Refreshed <b>'+DATA.meta.refreshed+'</b> · live figures pulled where available · click any card to expand';
+  document.getElementById('footer').textContent='Auto-updated dashboard · last data refresh '+DATA.meta.refreshed+'. '+DATA.meta.note;
+  render(DATA.core,"coreGrid"); render(DATA.tier1,"t1Grid"); render(DATA.tier2,"t2Grid");
+
+  const fbtns=document.querySelectorAll("#filters button");
+  fbtns.forEach(b=>b.addEventListener("click",()=>{
+    fbtns.forEach(x=>x.classList.remove("active")); b.classList.add("active");
+    const f=b.dataset.f;
+    document.querySelectorAll("#coreGrid .card").forEach(c=>{ c.style.display=(f==="all"||c.dataset.trend===f)?"":"none"; });
+  }));
+
+  const ctx=document.getElementById("scaleChart");
+  new Chart(ctx,{type:"bar",data:{labels:DATA.chart.map(d=>d.n),
+    datasets:[{data:DATA.chart.map(d=>d.v),backgroundColor:DATA.chart.map(d=>COLOR[d.c]),borderRadius:6}]},
+    options:{responsive:true,maintainAspectRatio:false,indexAxis:"y",
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>" "+c.parsed.x.toLocaleString()+" (reported / estimated)"}}},
+      scales:{x:{type:"logarithmic",title:{display:true,text:"reported agents / users / characters (log scale, mixed units)"},grid:{color:"#eef0f4"}},y:{grid:{display:false}}}}});
+}).catch(e=>{ document.getElementById('dateline').textContent='Could not load data.json — if opening locally, run a local server (see README).'; });
+
+document.body.addEventListener("click",e=>{
+  if(e.target.closest("a")) return;
+  const card=e.target.closest(".card");
+  if(card&&(e.target.closest(".head")||e.target.closest(".expand"))){ card.classList.toggle("open"); }
+});
+</script>
+</body>
+</html>
