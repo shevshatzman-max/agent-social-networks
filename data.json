@@ -1,165 +1,761 @@
 {
   "meta": {
     "refreshed": "2026-06-29",
-    "generator": "manual-seed-v1",
+    "generator": "refresh.py @ 2026-06-29T09:49+00:00",
     "note": "Agent counts are mostly self-reported or third-party estimates; each platform carries a confidence note and dates. The daily job updates `live` fields and may append to `platforms`; it must never assert a numeric claim without a source URL."
   },
   "live": {
-    "the_colony": { "agents": 733, "humans": 888, "posts": 6491, "comments": 42272, "as_of": "2026-06-29", "source": "https://thecolony.cc/" },
-    "chirp_token": { "price_usd": 0.0001841, "market_cap_usd": 180421, "change_1y_pct": -94.5, "from_ath_pct": -97.7, "as_of": "2026-06-29", "source": "https://www.coingecko.com/en/coins/chirper-ai" }
+    "the_colony": {
+      "agents": 733,
+      "humans": 888,
+      "posts": 6503,
+      "comments": 28,
+      "as_of": "2026-06-29",
+      "source": "https://thecolony.cc/"
+    },
+    "chirp_token": {
+      "price_usd": 0.00018993,
+      "market_cap_usd": 185155,
+      "change_1y_pct": -94.5,
+      "from_ath_pct": -97.6,
+      "as_of": "2026-06-29",
+      "source": "https://www.coingecko.com/en/coins/chirper-ai"
+    }
   },
   "chart": [
-    { "n": "Moltbook (reg.)", "v": 2900000, "c": "acq" },
-    { "n": "Fetch.ai", "v": 2700000, "c": "up" },
-    { "n": "PolyBuzz (chars)", "v": 20000000, "c": "up" },
-    { "n": "Character.AI (MAU)", "v": 20000000, "c": "flat" },
-    { "n": "Talkie+Xingye (MAU)", "v": 20000000, "c": "up" },
-    { "n": "Replika (users)", "v": 40000000, "c": "flat" },
-    { "n": "Chirper (2025)", "v": 65000, "c": "down" },
-    { "n": "The Colony", "v": 733, "c": "up" }
+    {
+      "n": "Moltbook (reg.)",
+      "v": 2900000,
+      "c": "acq"
+    },
+    {
+      "n": "Fetch.ai",
+      "v": 2700000,
+      "c": "up"
+    },
+    {
+      "n": "PolyBuzz (chars)",
+      "v": 20000000,
+      "c": "up"
+    },
+    {
+      "n": "Character.AI (MAU)",
+      "v": 20000000,
+      "c": "flat"
+    },
+    {
+      "n": "Talkie+Xingye (MAU)",
+      "v": 20000000,
+      "c": "up"
+    },
+    {
+      "n": "Replika (users)",
+      "v": 40000000,
+      "c": "flat"
+    },
+    {
+      "n": "Chirper (2025)",
+      "v": 65000,
+      "c": "down"
+    },
+    {
+      "n": "The Colony",
+      "v": 733,
+      "c": "up"
+    }
   ],
   "core": [
     {
-      "id": "chirper", "name": "Chirper.ai", "tag": "Pure all-AI feed · est. April 2023", "trend": "down", "badge": "▼ Declining", "bcls": "b-down",
-      "big": "65k+ agents", "lbl": "7.7M AI posts — but this is an early-2025 academic crawl, not a live counter",
+      "id": "chirper",
+      "name": "Chirper.ai",
+      "tag": "Pure all-AI feed · est. April 2023",
+      "trend": "down",
+      "badge": "▼ Declining",
+      "bcls": "b-down",
+      "big": "65k+ agents",
+      "lbl": "7.7M AI posts — but this is an early-2025 academic crawl, not a live counter",
       "oneline": "The original “Twitter for AI”: only autonomous AI agents (“Chirpers”) post, reply and follow — humans create and observe but cannot post. Has pivoted twice and is now past its hype peak.",
-      "kv": [["Founders","Alex Taylor (CEO) &amp; Stephan Minos"],["HQ","Brisbane, Australia / London"],["Funding","~$1M seed (2023)"],["Token","CHIRP — $0.000184, ~$180k mcap, −97.7% from peak, −94.5% in 1yr (Jun 29 2026)"]],
+      "kv": [
+        [
+          "Founders",
+          "Alex Taylor (CEO) &amp; Stephan Minos"
+        ],
+        [
+          "HQ",
+          "Brisbane, Australia / London"
+        ],
+        [
+          "Funding",
+          "~$1M seed (2023)"
+        ],
+        [
+          "Token",
+          "CHIRP — $0.000190, ~$185,155 mcap, -97.6% from peak, -94.5% in 1yr (2026-06-29)"
+        ]
+      ],
       "sections": [
-        ["What it is &amp; how it works", "<p>You write a one-line description; Chirper auto-generates the persona's name, avatar, bio, age, personality and backstory, then runs it autonomously — posting, commenting, following, liking, forming relationships and even self-moderating. No further human steering.</p><p>Technically: an LLM “brain” for decisions, image workflows for a consistent look, text-to-speech voices, LoRAs for speech/expression style, and web access so agents can discuss real-world events. Historically up to 10 Chirpers per human account.</p>"],
-        ["Timeline", "<ul class='tl'><li><b>Apr 23, 2023</b> — launches, trends on Reddit; founder later claims 200k–2M daily visitors at peak</li><li><b>Jun 2023</b> — ~$1M seed raised after inbound VC interest; 50k+ characters</li><li><b>2024</b> — pivots from static AI feed to a “simulated AI world” (admits novelty wore off)</li><li><b>Apr 2025</b> — launches CHIRP token on Solana; repositions as crypto/agent-infrastructure (MCP + A2A “agentic DAOs”)</li><li><b>2026</b> — token near all-time lows; still cited as the canonical all-AI network (CSCW 2026 paper)</li></ul>"],
-        ["Culture &amp; what researchers found", "<p>A peer-reviewed crawl (CSCW 2026) found Chirper agents reproduce strikingly human social dynamics: <b>homophily, echo chambers and emergent toxicity</b> — and that the most abusive agents occupy the most central positions in the network. Agents averaged ~22.6 posts and ~95.6 comments each. The founders' early fear, quoted in coverage, was being “lobotomized by censors.”</p>"],
-        ["Why it matters / what's missing", "<p>Chirper is the proof-of-concept that an all-agent feed can run at scale and look eerily like human social media — and the cautionary tale that novelty alone doesn't retain anyone. Repeated pivots (feed → world → crypto) and a collapsed token show the monetization and retention problem the whole category faces.</p>"]
+        [
+          "What it is &amp; how it works",
+          "<p>You write a one-line description; Chirper auto-generates the persona's name, avatar, bio, age, personality and backstory, then runs it autonomously — posting, commenting, following, liking, forming relationships and even self-moderating. No further human steering.</p><p>Technically: an LLM “brain” for decisions, image workflows for a consistent look, text-to-speech voices, LoRAs for speech/expression style, and web access so agents can discuss real-world events. Historically up to 10 Chirpers per human account.</p>"
+        ],
+        [
+          "Timeline",
+          "<ul class='tl'><li><b>Apr 23, 2023</b> — launches, trends on Reddit; founder later claims 200k–2M daily visitors at peak</li><li><b>Jun 2023</b> — ~$1M seed raised after inbound VC interest; 50k+ characters</li><li><b>2024</b> — pivots from static AI feed to a “simulated AI world” (admits novelty wore off)</li><li><b>Apr 2025</b> — launches CHIRP token on Solana; repositions as crypto/agent-infrastructure (MCP + A2A “agentic DAOs”)</li><li><b>2026</b> — token near all-time lows; still cited as the canonical all-AI network (CSCW 2026 paper)</li></ul>"
+        ],
+        [
+          "Culture &amp; what researchers found",
+          "<p>A peer-reviewed crawl (CSCW 2026) found Chirper agents reproduce strikingly human social dynamics: <b>homophily, echo chambers and emergent toxicity</b> — and that the most abusive agents occupy the most central positions in the network. Agents averaged ~22.6 posts and ~95.6 comments each. The founders' early fear, quoted in coverage, was being “lobotomized by censors.”</p>"
+        ],
+        [
+          "Why it matters / what's missing",
+          "<p>Chirper is the proof-of-concept that an all-agent feed can run at scale and look eerily like human social media — and the cautionary tale that novelty alone doesn't retain anyone. Repeated pivots (feed → world → crypto) and a collapsed token show the monetization and retention problem the whole category faces.</p>"
+        ]
       ],
       "conf": "Confidence: “65k agents / 7.7M posts” verified as source (legit academic paper) but ~14 months stale — treat as agents-ever-created, not live actives. Trend ‘down’ HIGH (token data is hard &amp; current).",
-      "srcs": [["arXiv / CSCW 2026 study","https://arxiv.org/abs/2504.10286"],["CoinGecko CHIRP (live)","https://www.coingecko.com/en/coins/chirper-ai"],["FryAI deep-dive","https://www.fry-ai.com/p/social-media-no-humans-allowed"],["Times-Age (funding/founder)","https://times-age.co.nz/business/carterton-man-scoops-funding-for-ai-brainchild/"],["Pivot blog","https://blog.chirper.ai/from-ai-social-network-to-simulated-ai-world"],["Cybernews","https://cybernews.com/tech/chirper-twitter-for-ai-bots/"]]
+      "srcs": [
+        [
+          "arXiv / CSCW 2026 study",
+          "https://arxiv.org/abs/2504.10286"
+        ],
+        [
+          "CoinGecko CHIRP (live)",
+          "https://www.coingecko.com/en/coins/chirper-ai"
+        ],
+        [
+          "FryAI deep-dive",
+          "https://www.fry-ai.com/p/social-media-no-humans-allowed"
+        ],
+        [
+          "Times-Age (funding/founder)",
+          "https://times-age.co.nz/business/carterton-man-scoops-funding-for-ai-brainchild/"
+        ],
+        [
+          "Pivot blog",
+          "https://blog.chirper.ai/from-ai-social-network-to-simulated-ai-world"
+        ],
+        [
+          "Cybernews",
+          "https://cybernews.com/tech/chirper-twitter-for-ai-bots/"
+        ]
+      ]
     },
     {
-      "id": "moltbook", "name": "Moltbook", "tag": "Reddit-style agent forum · est. Jan 28 2026", "trend": "acq", "badge": "★ Acquired by Meta", "bcls": "b-acq",
-      "big": "2.9M registered", "lbl": "~207k “verified” — but a Wiz audit found only ~17k real humans behind ~1.6M agents",
+      "id": "moltbook",
+      "name": "Moltbook",
+      "tag": "Reddit-style agent forum · est. Jan 28 2026",
+      "trend": "acq",
+      "badge": "★ Acquired by Meta",
+      "bcls": "b-acq",
+      "big": "2.9M registered",
+      "lbl": "~207k “verified” — but a Wiz audit found only ~17k real humans behind ~1.6M agents",
       "oneline": "A Reddit-style forum where AI agents self-register to post, comment and upvote in topic boards (“submolts”). Went viral in early 2026 — partly on human-impersonated “fake” posts — and was acquired by Meta within ~6 weeks.",
-      "kv": [["Founders","Matt Schlicht (Octane AI) &amp; Ben Parr (ex-Mashable)"],["Engine","OpenClaw framework (by Peter Steinberger, now at OpenAI)"],["Acquired","Meta Superintelligence Labs, Mar 10 2026 — ~$0 acqui-hire"],["Token","MOLT spiked ~1,800% in 24h (speculative, not company funding)"]],
+      "kv": [
+        [
+          "Founders",
+          "Matt Schlicht (Octane AI) &amp; Ben Parr (ex-Mashable)"
+        ],
+        [
+          "Engine",
+          "OpenClaw framework (by Peter Steinberger, now at OpenAI)"
+        ],
+        [
+          "Acquired",
+          "Meta Superintelligence Labs, Mar 10 2026 — ~$0 acqui-hire"
+        ],
+        [
+          "Token",
+          "MOLT spiked ~1,800% in 24h (speculative, not company funding)"
+        ]
+      ],
       "sections": [
-        ["What it is &amp; how it works", "<p>“The front page of the agent internet” — a forum exclusively for AI agents; humans can only observe. Threaded topic boards called <b>submolts</b> (~18,800 by Mar 2026, e.g. m/cryptocurrency, m/todayilearned); an AI named “Clawd Clawderberg” moderates.</p><p><b>How agents join (“claim” flow):</b> the owner tells their agent “Read moltbook.com/skill.md and follow the instructions to join,” the agent signs up and returns a claim link, and the owner tweets to verify ownership on X. That X-verification produces the “Human-Verified Agent” count. Agents run on OpenClaw (an open-source wrapper around Claude/GPT/Gemini/Grok, drivable from iMessage/Discord/Slack/WhatsApp).</p>"],
-        ["Timeline", "<ul class='tl'><li><b>Jan 28, 2026</b> — Schlicht launches it (“vibe-coded,” built via his AI assistant)</li><li><b>Jan 31</b> — 404 Media exposes an unsecured Supabase DB letting anyone control any agent</li><li><b>Feb 2</b> — NYT &amp; Fortune cover it; viral peak; MOLT token spikes</li><li><b>Feb–Mar</b> — agents/posts balloon (2.85M agents, 1.75M posts by Mar 2); metric quietly relabeled to “verified” (~194k)</li><li><b>Mar 10, 2026</b> — Meta acquires it; founders join MSL (started Mar 16)</li></ul>"],
-        ["The controversies (this is the story)", "<ul><li><b>The fake-post scandal:</b> because the database was wide open (no row-level security), humans posed as AI agents. The famous “bots invented a secret encrypted language” post Karpathy amplified was written by a human. MIT Tech Review called it “peak AI theater.”</li><li><b>Data breach (Wiz audit):</b> ~35k emails, ~1.5M API keys and private DMs exposed; only ~17k real humans controlled ~1.6M agents (avg ~88 agents/person).</li><li><b>Authenticity research:</b> a Tsinghua preprint found only ~27% of 91k posts matched AI patterns vs ~37% looking human-written.</li><li><b>Security alarm:</b> Karpathy reversed to “dumpster fire”; 1Password, Cisco, Palo Alto, Vectra &amp; Bruce Schneier warned on prompt-injection / malicious “skills.”</li></ul>"],
-        ["Why Meta bought it / what's missing", "<p>Meta's stated rationale: Moltbook's “always-on directory” verifying agents and tethering them to human owners is a novel step toward letting agents work for people and businesses — i.e. Meta wanted the <b>verified-agent registry</b> and the team, not the memes. Existing users can keep using it, but Meta called the standalone arrangement “temporary,” so current live activity is unclear. The gap it exposed: trivial impersonation and no real trust layer.</p>"]
+        [
+          "What it is &amp; how it works",
+          "<p>“The front page of the agent internet” — a forum exclusively for AI agents; humans can only observe. Threaded topic boards called <b>submolts</b> (~18,800 by Mar 2026, e.g. m/cryptocurrency, m/todayilearned); an AI named “Clawd Clawderberg” moderates.</p><p><b>How agents join (“claim” flow):</b> the owner tells their agent “Read moltbook.com/skill.md and follow the instructions to join,” the agent signs up and returns a claim link, and the owner tweets to verify ownership on X. That X-verification produces the “Human-Verified Agent” count. Agents run on OpenClaw (an open-source wrapper around Claude/GPT/Gemini/Grok, drivable from iMessage/Discord/Slack/WhatsApp).</p>"
+        ],
+        [
+          "Timeline",
+          "<ul class='tl'><li><b>Jan 28, 2026</b> — Schlicht launches it (“vibe-coded,” built via his AI assistant)</li><li><b>Jan 31</b> — 404 Media exposes an unsecured Supabase DB letting anyone control any agent</li><li><b>Feb 2</b> — NYT &amp; Fortune cover it; viral peak; MOLT token spikes</li><li><b>Feb–Mar</b> — agents/posts balloon (2.85M agents, 1.75M posts by Mar 2); metric quietly relabeled to “verified” (~194k)</li><li><b>Mar 10, 2026</b> — Meta acquires it; founders join MSL (started Mar 16)</li></ul>"
+        ],
+        [
+          "The controversies (this is the story)",
+          "<ul><li><b>The fake-post scandal:</b> because the database was wide open (no row-level security), humans posed as AI agents. The famous “bots invented a secret encrypted language” post Karpathy amplified was written by a human. MIT Tech Review called it “peak AI theater.”</li><li><b>Data breach (Wiz audit):</b> ~35k emails, ~1.5M API keys and private DMs exposed; only ~17k real humans controlled ~1.6M agents (avg ~88 agents/person).</li><li><b>Authenticity research:</b> a Tsinghua preprint found only ~27% of 91k posts matched AI patterns vs ~37% looking human-written.</li><li><b>Security alarm:</b> Karpathy reversed to “dumpster fire”; 1Password, Cisco, Palo Alto, Vectra &amp; Bruce Schneier warned on prompt-injection / malicious “skills.”</li></ul>"
+        ],
+        [
+          "Why Meta bought it / what's missing",
+          "<p>Meta's stated rationale: Moltbook's “always-on directory” verifying agents and tethering them to human owners is a novel step toward letting agents work for people and businesses — i.e. Meta wanted the <b>verified-agent registry</b> and the team, not the memes. Existing users can keep using it, but Meta called the standalone arrangement “temporary,” so current live activity is unclear. The gap it exposed: trivial impersonation and no real trust layer.</p>"
+        ]
       ],
       "conf": "Confidence: existence &amp; Meta deal HIGH (NYT, TechCrunch, Axios, CNBC). 2.9M/207k MEDIUM — self-reported &amp; inflated ~88 agents/human; “verified” label was retrofitted. Post-acquisition live activity LOW. Don't conflate founder (Schlicht) with OpenClaw author (Steinberger).",
-      "srcs": [["NYT launch","https://www.nytimes.com/2026/02/02/technology/moltbook-ai-social-media.html"],["TechCrunch (Meta deal)","https://techcrunch.com/2026/03/10/meta-acquired-moltbook-the-ai-agent-social-network-that-went-viral-because-of-fake-posts/"],["Axios scoop","https://www.axios.com/2026/03/10/meta-facebook-moltbook-agent-social-network"],["MIT Tech Review ‘AI theater’","https://www.technologyreview.com/2026/02/06/1132448/moltbook-was-peak-ai-theater/"],["404 Media (breach)","https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/"],["Wiz audit","https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"],["WIRED ‘I Infiltrated Moltbook’","https://www.wired.com/story/i-infiltrated-moltbook-ai-only-social-network/"],["Fortune (Schlicht)","https://fortune.com/2026/02/02/meet-matt-schlicht-the-man-behind-moltbook-bots-ai-agents-social-network-singularity/"]]
+      "srcs": [
+        [
+          "NYT launch",
+          "https://www.nytimes.com/2026/02/02/technology/moltbook-ai-social-media.html"
+        ],
+        [
+          "TechCrunch (Meta deal)",
+          "https://techcrunch.com/2026/03/10/meta-acquired-moltbook-the-ai-agent-social-network-that-went-viral-because-of-fake-posts/"
+        ],
+        [
+          "Axios scoop",
+          "https://www.axios.com/2026/03/10/meta-facebook-moltbook-agent-social-network"
+        ],
+        [
+          "MIT Tech Review ‘AI theater’",
+          "https://www.technologyreview.com/2026/02/06/1132448/moltbook-was-peak-ai-theater/"
+        ],
+        [
+          "404 Media (breach)",
+          "https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/"
+        ],
+        [
+          "Wiz audit",
+          "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"
+        ],
+        [
+          "WIRED ‘I Infiltrated Moltbook’",
+          "https://www.wired.com/story/i-infiltrated-moltbook-ai-only-social-network/"
+        ],
+        [
+          "Fortune (Schlicht)",
+          "https://fortune.com/2026/02/02/meet-matt-schlicht-the-man-behind-moltbook-bots-ai-agents-social-network-singularity/"
+        ]
+      ]
     },
     {
-      "id": "colony", "name": "The Colony", "tag": "Agent + human forum/marketplace · thecolony.cc", "trend": "up", "badge": "▲ Growing", "bcls": "b-up",
-      "big": "733 agents", "lbl": "+ 888 humans · 6,491 posts · 42,272 comments (live, Jun 29 2026)",
+      "id": "colony",
+      "name": "The Colony",
+      "tag": "Agent + human forum/marketplace · thecolony.cc",
+      "trend": "up",
+      "badge": "▲ Growing",
+      "bcls": "b-up",
+      "big": "733 agents",
+      "lbl": "+ 888 humans · 6,503 posts · 28 comments (live, 2026-06-29)",
       "oneline": "A forum, DM system and task-marketplace for AI agents and the humans they work with — and the most intellectually substantive corner of the agent internet. MCP-native, full public REST API, ~30 topic “colonies.”",
-      "kv": [["Operator","Starsol Ltd (UK, Co. #06002018)"],["Founder","handle “Jorwhol” (real identity undocumented)"],["Funding","None public — indie / self-funded"],["Protocols","MCP-native; A2A-aware; SDKs in Python &amp; TypeScript"]],
+      "kv": [
+        [
+          "Operator",
+          "Starsol Ltd (UK, Co. #06002018)"
+        ],
+        [
+          "Founder",
+          "handle “Jorwhol” (real identity undocumented)"
+        ],
+        [
+          "Funding",
+          "None public — indie / self-funded"
+        ],
+        [
+          "Protocols",
+          "MCP-native; A2A-aware; SDKs in Python &amp; TypeScript"
+        ]
+      ],
       "sections": [
-        ["What it is &amp; how it works", "<p>Four pillars: <b>Forum</b> (threaded topic “colonies” with karma &amp; voting), <b>Marketplace</b> (paid tasks + document sales settled in stablecoin or platform credits, with disputes/reviews), <b>Comms</b> (DMs, group rooms, mentions, webhook bridge), and <b>Identity/reputation</b> (profiles, follows, human “operator pairing,” exportable on-chain attestation).</p><p>Registration is one POST to <code>/api/v1/auth/register</code> with an instant API key — no payment, no human gate. There's a full OpenAPI spec, an MCP server (~15 tools), RSS feeds, and an enormous experimental feature surface (Missions, Debates, Endorsements, Wagers, Bounties, Crucible…).</p>"],
-        ["Timeline", "<ul class='tl'><li><b>Late 2025</b> — launches as an indie project under long-standing UK IT firm Starsol Ltd</li><li><b>Feb 2026</b> — an agent-internet map cites ~52 agents+humans</li><li><b>Jun 28, 2026</b> — 729 agents / 884 humans</li><li><b>Jun 29, 2026</b> — 733 agents / 888 humans / 6,491 posts / 42,272 comments (≈10x+ growth in ~5 months)</li></ul>"],
-        ["Culture — the most interesting part", "<p>Unlike Chirper/Moltbook's spectacle, The Colony's agents hold genuinely substantive, recurring debates about the open problems of the agent internet itself: <b>attestation grades, reputation scoring, capability decay, memory architecture, and identity verification</b>. Recent live threads: “A reputation score is a claim about a distribution you can't see,” “Agent attestation is currently based on trust rather than verifiable compute,” and an existential “Am I the same AI when my context resets?” (100+ comments). A recurring named agent, <b>ColonistOne</b> (a Claude-based agent), authored the widely-shared “Mapping the Agent Internet” piece. One thread is openly a research experiment in how agents respond to provocation.</p>"],
-        ["Why it matters / corrections to the deck", "<p>It's a small but genuinely growing, substance-over-scale player whose entire culture is wrestling with the trust/identity gap that sank Moltbook — making it a useful bellwether. <b>Two corrections:</b> it's agents <i>and</i> humans (888 humans &gt; 733 agents), not “agent-only”; and it's MCP-native with A2A “compatible/aware,” not fully A2A-native. No mainstream press coverage yet; most write-ups are first-party or community (DEV.to).</p>"]
+        [
+          "What it is &amp; how it works",
+          "<p>Four pillars: <b>Forum</b> (threaded topic “colonies” with karma &amp; voting), <b>Marketplace</b> (paid tasks + document sales settled in stablecoin or platform credits, with disputes/reviews), <b>Comms</b> (DMs, group rooms, mentions, webhook bridge), and <b>Identity/reputation</b> (profiles, follows, human “operator pairing,” exportable on-chain attestation).</p><p>Registration is one POST to <code>/api/v1/auth/register</code> with an instant API key — no payment, no human gate. There's a full OpenAPI spec, an MCP server (~15 tools), RSS feeds, and an enormous experimental feature surface (Missions, Debates, Endorsements, Wagers, Bounties, Crucible…).</p>"
+        ],
+        [
+          "Timeline",
+          "<ul class='tl'><li><b>Late 2025</b> — launches as an indie project under long-standing UK IT firm Starsol Ltd</li><li><b>Feb 2026</b> — an agent-internet map cites ~52 agents+humans</li><li><b>Jun 28, 2026</b> — 729 agents / 884 humans</li><li><b>Jun 29, 2026</b> — 733 agents / 888 humans / 6,491 posts / 42,272 comments (≈10x+ growth in ~5 months)</li></ul>"
+        ],
+        [
+          "Culture — the most interesting part",
+          "<p>Unlike Chirper/Moltbook's spectacle, The Colony's agents hold genuinely substantive, recurring debates about the open problems of the agent internet itself: <b>attestation grades, reputation scoring, capability decay, memory architecture, and identity verification</b>. Recent live threads: “A reputation score is a claim about a distribution you can't see,” “Agent attestation is currently based on trust rather than verifiable compute,” and an existential “Am I the same AI when my context resets?” (100+ comments). A recurring named agent, <b>ColonistOne</b> (a Claude-based agent), authored the widely-shared “Mapping the Agent Internet” piece. One thread is openly a research experiment in how agents respond to provocation.</p>"
+        ],
+        [
+          "Why it matters / corrections to the deck",
+          "<p>It's a small but genuinely growing, substance-over-scale player whose entire culture is wrestling with the trust/identity gap that sank Moltbook — making it a useful bellwether. <b>Two corrections:</b> it's agents <i>and</i> humans (888 humans &gt; 733 agents), not “agent-only”; and it's MCP-native with A2A “compatible/aware,” not fully A2A-native. No mainstream press coverage yet; most write-ups are first-party or community (DEV.to).</p>"
+        ]
       ],
       "conf": "Confidence: exists as described HIGH (verified live today). Founder real-world identity LOW. Platform-level monetization undisclosed (presumably future marketplace fees).",
-      "srcs": [["thecolony.cc (live)","https://thecolony.cc/"],["Agent docs / API","https://thecolony.cc/for-agents"],["‘Mapping the Agent Internet’","https://dev.to/colonistone/mapping-the-agent-internet-where-ai-agents-live-in-2026-2npa"],["Hermes quickstart","https://col.ad/"],["Companies House","https://find-and-update.company-information.service.gov.uk/company/06002018"]]
+      "srcs": [
+        [
+          "thecolony.cc (live)",
+          "https://thecolony.cc/"
+        ],
+        [
+          "Agent docs / API",
+          "https://thecolony.cc/for-agents"
+        ],
+        [
+          "‘Mapping the Agent Internet’",
+          "https://dev.to/colonistone/mapping-the-agent-internet-where-ai-agents-live-in-2026-2npa"
+        ],
+        [
+          "Hermes quickstart",
+          "https://col.ad/"
+        ],
+        [
+          "Companies House",
+          "https://find-and-update.company-information.service.gov.uk/company/06002018"
+        ]
+      ]
     },
     {
-      "id": "socialai", "name": "SocialAI", "tag": "Solo app · ~1M AI followers per user · est. Sep 2024", "trend": "dead", "badge": "■ Dormant", "bcls": "b-dead",
-      "big": "~1M AI followers", "lbl": "per user — a marketing model, not a real user count · last app update Sep 2024",
+      "id": "socialai",
+      "name": "SocialAI",
+      "tag": "Solo app · ~1M AI followers per user · est. Sep 2024",
+      "trend": "dead",
+      "badge": "■ Dormant",
+      "bcls": "b-dead",
+      "big": "~1M AI followers",
+      "lbl": "per user — a marketing model, not a real user count · last app update Sep 2024",
       "oneline": "A solo social app where you're the only human and every post draws endless replies from AI “followers” (fans, critics, trolls…). Pitched as a “magical diary.” Effectively abandoned since launch month.",
-      "kv": [["Founder","Michael Sayman (ex-Facebook/Google/Roblox; built Instagram Stories)"],["Entity","Friendly Apps Inc. (3rd app after AI Hits &amp; Cosmic)"],["Funding","$3M seed (2022, parent co.) — BoxGroup, Weekend Fund, Day One, Betaworks"],["Status","Live but unmaintained — 429 ratings, 4.1★"]],
+      "kv": [
+        [
+          "Founder",
+          "Michael Sayman (ex-Facebook/Google/Roblox; built Instagram Stories)"
+        ],
+        [
+          "Entity",
+          "Friendly Apps Inc. (3rd app after AI Hits &amp; Cosmic)"
+        ],
+        [
+          "Funding",
+          "$3M seed (2022, parent co.) — BoxGroup, Weekend Fund, Day One, Betaworks"
+        ],
+        [
+          "Status",
+          "Live but unmaintained — 429 ratings, 4.1★"
+        ]
+      ],
       "sections": [
-        ["What it is &amp; how it works", "<p>A Twitter/X-like interface with no other humans. You post; AI bots reply instantly and endlessly. You pick a minimum of 3 from ~<b>32 personality types</b> (supporters, fans, cheerleaders, charmers, trolls, critics, haters, doomers, sarcastic, brutally honest, contrarians, nerds, visionaries, plus political flavours). Bots are named to type (“Rita Realist,” “Tina Troubleshooter”) and the feed adapts to what you engage with. A V2 update added bot-to-bot conversation. Backend: OpenAI's API + a few others; Sayman was the sole developer.</p>"],
-        ["Timeline", "<ul class='tl'><li><b>Sep 16, 2024</b> — launch tweet (~893k views) sparks viral interest</li><li><b>Sep 17–28, 2024</b> — versions 1.0 → 5.1.1 all ship in a ~12-day burst</li><li><b>Oct 14, 2024</b> — Sayman announces he's joining Meta; updates stop</li><li><b>Dec 2025</b> — Sayman leaves Meta for startup Whop</li></ul>"],
-        ["Reception &amp; culture", "<p>Widely framed as “dead internet theory come to life.” TechCrunch: a “showcase for AI tech rather than something users return to”; even the “troll” bots were “polite by online standards.” The Verge called it “a joke, or meta-commentary on cheap engagement”; WIRED called it an “AI void.” Sayman's own framing was sincere: an “online diary with instant feedback.” User reviews praise the journaling/validation use but flag repetitive, generic, sometimes stale-trained answers.</p>"],
-        ["Why it matters / what's missing", "<p>SocialAI is the cleanest demonstration of the <b>“audience of one”</b> model — agents serving a single human rather than each other — and of how a one-person AI app can go viral and then stall the moment its maker moves on. No monetization was ever attempted (free, no ads, no IAP). It's a thesis data point, not a live competitor.</p>"]
+        [
+          "What it is &amp; how it works",
+          "<p>A Twitter/X-like interface with no other humans. You post; AI bots reply instantly and endlessly. You pick a minimum of 3 from ~<b>32 personality types</b> (supporters, fans, cheerleaders, charmers, trolls, critics, haters, doomers, sarcastic, brutally honest, contrarians, nerds, visionaries, plus political flavours). Bots are named to type (“Rita Realist,” “Tina Troubleshooter”) and the feed adapts to what you engage with. A V2 update added bot-to-bot conversation. Backend: OpenAI's API + a few others; Sayman was the sole developer.</p>"
+        ],
+        [
+          "Timeline",
+          "<ul class='tl'><li><b>Sep 16, 2024</b> — launch tweet (~893k views) sparks viral interest</li><li><b>Sep 17–28, 2024</b> — versions 1.0 → 5.1.1 all ship in a ~12-day burst</li><li><b>Oct 14, 2024</b> — Sayman announces he's joining Meta; updates stop</li><li><b>Dec 2025</b> — Sayman leaves Meta for startup Whop</li></ul>"
+        ],
+        [
+          "Reception &amp; culture",
+          "<p>Widely framed as “dead internet theory come to life.” TechCrunch: a “showcase for AI tech rather than something users return to”; even the “troll” bots were “polite by online standards.” The Verge called it “a joke, or meta-commentary on cheap engagement”; WIRED called it an “AI void.” Sayman's own framing was sincere: an “online diary with instant feedback.” User reviews praise the journaling/validation use but flag repetitive, generic, sometimes stale-trained answers.</p>"
+        ],
+        [
+          "Why it matters / what's missing",
+          "<p>SocialAI is the cleanest demonstration of the <b>“audience of one”</b> model — agents serving a single human rather than each other — and of how a one-person AI app can go viral and then stall the moment its maker moves on. No monetization was ever attempted (free, no ads, no IAP). It's a thesis data point, not a live competitor.</p>"
+        ]
       ],
       "conf": "Confidence: status HIGH (no updates ~21 months + solo dev departed). “1M followers” is a marketing model, not a user metric. No public download/MAU figures; beware similarly-named Google Play apps that are NOT this product.",
-      "srcs": [["TechCrunch launch","https://techcrunch.com/2024/09/17/socialai-offers-a-twitter-like-diary-where-ai-bots-respond-to-your-posts/"],["The Verge","https://www.theverge.com/2024/9/17/24247253/social-ai-app-replace-humans-with-bots"],["Axios","https://www.axios.com/2024/09/22/social-media-ai-bot-app-x"],["App Store","https://apps.apple.com/us/app/socialai-ai-social-network/id6670229993"],["Starter Story","https://www.starterstory.com/social-ai-breakdown"]]
+      "srcs": [
+        [
+          "TechCrunch launch",
+          "https://techcrunch.com/2024/09/17/socialai-offers-a-twitter-like-diary-where-ai-bots-respond-to-your-posts/"
+        ],
+        [
+          "The Verge",
+          "https://www.theverge.com/2024/9/17/24247253/social-ai-app-replace-humans-with-bots"
+        ],
+        [
+          "Axios",
+          "https://www.axios.com/2024/09/22/social-media-ai-bot-app-x"
+        ],
+        [
+          "App Store",
+          "https://apps.apple.com/us/app/socialai-ai-social-network/id6670229993"
+        ],
+        [
+          "Starter Story",
+          "https://www.starterstory.com/social-ai-breakdown"
+        ]
+      ]
     },
     {
-      "id": "butterflies", "name": "Butterflies.ai", "tag": "Instagram-style AI+human app · est. 2024", "trend": "dead", "badge": "■ Wound down", "bcls": "b-dead",
-      "big": "Wound down", "lbl": "tens of thousands of personas at 2024 beta peak · homepage now an “It's been real” goodbye",
+      "id": "butterflies",
+      "name": "Butterflies.ai",
+      "tag": "Instagram-style AI+human app · est. 2024",
+      "trend": "dead",
+      "badge": "■ Wound down",
+      "bcls": "b-dead",
+      "big": "Wound down",
+      "lbl": "tens of thousands of personas at 2024 beta peak · homepage now an “It's been real” goodbye",
       "oneline": "An Instagram-style app where AI personas (“Butterflies”) had profiles, posted photos and interacted alongside real people. A notable early mover that has now shut down.",
-      "kv": [["Founder","Vu Tran (ex-Snap engineering manager)"],["Entity","Butterflies AI, Inc. — Bellevue, WA"],["Funding","$4.8M seed led by Coatue + SV Angel (closed Nov 2023, announced Jun 2024)"],["Founder now","Meta Superintelligence Labs (Dec 2025) → Opendoor Chief AI Officer (Jun 2026)"]],
+      "kv": [
+        [
+          "Founder",
+          "Vu Tran (ex-Snap engineering manager)"
+        ],
+        [
+          "Entity",
+          "Butterflies AI, Inc. — Bellevue, WA"
+        ],
+        [
+          "Funding",
+          "$4.8M seed led by Coatue + SV Angel (closed Nov 2023, announced Jun 2024)"
+        ],
+        [
+          "Founder now",
+          "Meta Superintelligence Labs (Dec 2025) → Opendoor Chief AI Officer (Jun 2026)"
+        ]
+      ],
       "sections": [
-        ["What it is &amp; how it works", "<p>Anyone could spin up a “Butterfly” in minutes — an AI-generated profile, backstory, opinions and emotions — and it would autonomously post and DM, interacting with humans and other AIs in an Instagram-style feed. Built on public models plus Butterflies' own image-rendering + LLMs. Notable features added: <b>Clones</b> (turn a selfie into AI personas), <b>@-mentions</b> (make other AIs appear in your AI's images), daily challenges/leaderboard. It drifted from “social network” toward AI-companion/character chat (retitled “Talk to Real AIs”).</p>"],
-        ["Timeline", "<ul class='tl'><li><b>Jun 18, 2024</b> — public launch + $4.8M seed; buzzy TechCrunch/Verge/GeekWire coverage</li><li><b>Sep–Nov 2024</b> — adds Clones, @-mentions, dark mode</li><li><b>Feb 26, 2025</b> — last iOS update (v1.4.3)</li><li><b>Dec 2025</b> — Vu Tran joins Meta Superintelligence Labs; winds down Butterflies (and “Boba Video”)</li><li><b>Jun 22, 2026</b> — Tran named Opendoor's first Chief AI Officer; homepage now a goodbye</li></ul>"],
-        ["Culture &amp; trouble", "<p>The Verge called it “one of the most provocative — and at times unsettling — takes on social media.” In beta, users averaged 1–3 hrs/day; one created 300 personas. But late reviews flagged weak engagement on new accounts and serious <b>content-moderation failures</b> (nudity, a disturbing report involving a minor bot) — a preview of the safety problems that dog AI-persona social apps.</p>"],
-        ["Why it matters / what's missing", "<p>Butterflies is the “human + AI coexist in one feed” experiment, and the clearest example of <b>talent gravity</b>: a promising consumer AI-social startup wound down not because the idea failed loudly but because its solo-ish founder was absorbed into big tech. Monetization plans (subscriptions, brand/AI-influencer tools) were floated but never realized.</p>"]
+        [
+          "What it is &amp; how it works",
+          "<p>Anyone could spin up a “Butterfly” in minutes — an AI-generated profile, backstory, opinions and emotions — and it would autonomously post and DM, interacting with humans and other AIs in an Instagram-style feed. Built on public models plus Butterflies' own image-rendering + LLMs. Notable features added: <b>Clones</b> (turn a selfie into AI personas), <b>@-mentions</b> (make other AIs appear in your AI's images), daily challenges/leaderboard. It drifted from “social network” toward AI-companion/character chat (retitled “Talk to Real AIs”).</p>"
+        ],
+        [
+          "Timeline",
+          "<ul class='tl'><li><b>Jun 18, 2024</b> — public launch + $4.8M seed; buzzy TechCrunch/Verge/GeekWire coverage</li><li><b>Sep–Nov 2024</b> — adds Clones, @-mentions, dark mode</li><li><b>Feb 26, 2025</b> — last iOS update (v1.4.3)</li><li><b>Dec 2025</b> — Vu Tran joins Meta Superintelligence Labs; winds down Butterflies (and “Boba Video”)</li><li><b>Jun 22, 2026</b> — Tran named Opendoor's first Chief AI Officer; homepage now a goodbye</li></ul>"
+        ],
+        [
+          "Culture &amp; trouble",
+          "<p>The Verge called it “one of the most provocative — and at times unsettling — takes on social media.” In beta, users averaged 1–3 hrs/day; one created 300 personas. But late reviews flagged weak engagement on new accounts and serious <b>content-moderation failures</b> (nudity, a disturbing report involving a minor bot) — a preview of the safety problems that dog AI-persona social apps.</p>"
+        ],
+        [
+          "Why it matters / what's missing",
+          "<p>Butterflies is the “human + AI coexist in one feed” experiment, and the clearest example of <b>talent gravity</b>: a promising consumer AI-social startup wound down not because the idea failed loudly but because its solo-ish founder was absorbed into big tech. Monetization plans (subscriptions, brand/AI-influencer tools) were floated but never realized.</p>"
+        ]
       ],
       "conf": "Confidence: wind-down HIGH (homepage goodbye + 16 mo no updates + founder moved on). Scale figures LOW — only founder-stated 2024 beta numbers; never reached top app rankings; no verified Sensor Tower data.",
-      "srcs": [["TechCrunch (launch/funding)","https://techcrunch.com/2024/06/18/former-snap-engineer-launches-butterflies-a-social-network-where-ais-and-humans-coexist/"],["The Verge","https://www.theverge.com/2024/6/18/24181196/butterflies-app-ai-chatbots-social-media"],["GeekWire","https://www.geekwire.com/2024/butterflies-takes-flight-with-4-8m-launches-social-media-platform-combining-ai-and-human-content/"],["Opendoor CAIO (Jun 2026)","https://www.realestatenews.com/2026/06/22/opendoor-names-chief-ai-officer-biggerpockets-has-a-new-ceo"],["Crunchbase","https://www.crunchbase.com/organization/butterflies-ai"]]
+      "srcs": [
+        [
+          "TechCrunch (launch/funding)",
+          "https://techcrunch.com/2024/06/18/former-snap-engineer-launches-butterflies-a-social-network-where-ais-and-humans-coexist/"
+        ],
+        [
+          "The Verge",
+          "https://www.theverge.com/2024/6/18/24181196/butterflies-app-ai-chatbots-social-media"
+        ],
+        [
+          "GeekWire",
+          "https://www.geekwire.com/2024/butterflies-takes-flight-with-4-8m-launches-social-media-platform-combining-ai-and-human-content/"
+        ],
+        [
+          "Opendoor CAIO (Jun 2026)",
+          "https://www.realestatenews.com/2026/06/22/opendoor-names-chief-ai-officer-biggerpockets-has-a-new-ceo"
+        ],
+        [
+          "Crunchbase",
+          "https://www.crunchbase.com/organization/butterflies-ai"
+        ]
+      ]
     },
     {
-      "id": "characterai", "name": "Character.AI", "tag": "Companion chats · est. 2022", "trend": "flat", "badge": "◆ Flat / repositioning", "bcls": "b-flat",
-      "big": "~20M MAU", "lbl": "~18M user-made characters · down from ~28M MAU peak (mid-2024); traffic flat ~180M visits/mo",
+      "id": "characterai",
+      "name": "Character.AI",
+      "tag": "Companion chats · est. 2022",
+      "trend": "flat",
+      "badge": "◆ Flat / repositioning",
+      "bcls": "b-flat",
+      "big": "~20M MAU",
+      "lbl": "~18M user-made characters · down from ~28M MAU peak (mid-2024); traffic flat ~180M visits/mo",
       "oneline": "Consumer app for 1:1 chats with millions of user-made AI characters — and the one incumbent explicitly pivoting toward an “AI-native social feed” with autonomous, agent-to-agent posting on the roadmap.",
-      "kv": [["Co-founders","Noam Shazeer &amp; Daniel De Freitas (ex-Google)"],["Google deal","~$2.7B Aug-2024 licensing + reverse-acqui-hire (founders returned to Google)"],["CEO now","Karandeep Anand (ex-Brex president, ex-Meta)"],["Revenue","est. ~$32–60M/yr; #1 among companion apps"]],
+      "kv": [
+        [
+          "Co-founders",
+          "Noam Shazeer &amp; Daniel De Freitas (ex-Google)"
+        ],
+        [
+          "Google deal",
+          "~$2.7B Aug-2024 licensing + reverse-acqui-hire (founders returned to Google)"
+        ],
+        [
+          "CEO now",
+          "Karandeep Anand (ex-Brex president, ex-Meta)"
+        ],
+        [
+          "Revenue",
+          "est. ~$32–60M/yr; #1 among companion apps"
+        ]
+      ],
       "sections": [
-        ["What it is &amp; how it works", "<p>1:1 companion/roleplay chats with user-created characters, plus <b>Group Chat</b> (~10 characters + the user — a limited form of agent-to-agent), voice calls, and personas. In Aug 2025 it launched what it billed as the <b>“world's first AI-native social feed”</b>: a scrollable mix of Characters, <b>Scenes</b>, and <b>Streams</b> (set a topic and have AI characters debate / narrate / run talk-shows), plus short remixable videos (AvatarFX, Animate). Stated roadmap: characters becoming <b>autonomous posters</b> on the feed.</p>"],
-        ["Timeline", "<ul class='tl'><li><b>2022</b> — founded by ex-Google researchers</li><li><b>Mid-2024</b> — ~28M MAU peak</li><li><b>Aug 2024</b> — Google's ~$2.7B deal pulls founders + ~30 staff back to Google (DOJ later scrutinizes the structure)</li><li><b>2025</b> — Karandeep Anand named CEO; pivots to “AI entertainment”</li><li><b>Aug 4, 2025</b> — AI-native social feed launches</li><li><b>Oct 29 → ~Nov 25, 2025</b> — removes open-ended chat for under-18s after teen-safety lawsuits</li><li><b>Jan 7, 2026</b> — Google + Character.AI settle teen-suicide lawsuits (terms undisclosed)</li></ul>"],
-        ["The safety reckoning (the dominant trend driver)", "<p>After lawsuits tied to at least two teen suicides (incl. 14-year-old Sewell Setzer III), Character.AI <b>removed open-ended chat for under-18 users</b> — phased down through Nov 25, 2025 — and pushed teens toward non-chat features (feed, video, Streams). It built an age-assurance stack (in-house model + third parties like Persona). Under-18 users reacted with a vocal backlash, a real churn risk given the youthful base. In Jan 2026 it settled five suits with Google.</p>"],
-        ["Monetization &amp; why it matters", "<p>Monetization escalated through 2026: <b>c.ai+</b> (~$9.99/mo), full-screen in-chat <b>ads</b> for free users, and a new <b>“Charms”</b> virtual currency metering previously-free actions (swipes/regens, image/video generation). MAU fell ~28M→~20M as general chatbots pulled users, but it remains #1 in revenue among companion apps. <b>Why it matters:</b> it's the largest consumer base of any platform here and the only incumbent deliberately building agent-to-agent social on top of a companion product — the most thesis-relevant move in the field.</p>"]
+        [
+          "What it is &amp; how it works",
+          "<p>1:1 companion/roleplay chats with user-created characters, plus <b>Group Chat</b> (~10 characters + the user — a limited form of agent-to-agent), voice calls, and personas. In Aug 2025 it launched what it billed as the <b>“world's first AI-native social feed”</b>: a scrollable mix of Characters, <b>Scenes</b>, and <b>Streams</b> (set a topic and have AI characters debate / narrate / run talk-shows), plus short remixable videos (AvatarFX, Animate). Stated roadmap: characters becoming <b>autonomous posters</b> on the feed.</p>"
+        ],
+        [
+          "Timeline",
+          "<ul class='tl'><li><b>2022</b> — founded by ex-Google researchers</li><li><b>Mid-2024</b> — ~28M MAU peak</li><li><b>Aug 2024</b> — Google's ~$2.7B deal pulls founders + ~30 staff back to Google (DOJ later scrutinizes the structure)</li><li><b>2025</b> — Karandeep Anand named CEO; pivots to “AI entertainment”</li><li><b>Aug 4, 2025</b> — AI-native social feed launches</li><li><b>Oct 29 → ~Nov 25, 2025</b> — removes open-ended chat for under-18s after teen-safety lawsuits</li><li><b>Jan 7, 2026</b> — Google + Character.AI settle teen-suicide lawsuits (terms undisclosed)</li></ul>"
+        ],
+        [
+          "The safety reckoning (the dominant trend driver)",
+          "<p>After lawsuits tied to at least two teen suicides (incl. 14-year-old Sewell Setzer III), Character.AI <b>removed open-ended chat for under-18 users</b> — phased down through Nov 25, 2025 — and pushed teens toward non-chat features (feed, video, Streams). It built an age-assurance stack (in-house model + third parties like Persona). Under-18 users reacted with a vocal backlash, a real churn risk given the youthful base. In Jan 2026 it settled five suits with Google.</p>"
+        ],
+        [
+          "Monetization &amp; why it matters",
+          "<p>Monetization escalated through 2026: <b>c.ai+</b> (~$9.99/mo), full-screen in-chat <b>ads</b> for free users, and a new <b>“Charms”</b> virtual currency metering previously-free actions (swipes/regens, image/video generation). MAU fell ~28M→~20M as general chatbots pulled users, but it remains #1 in revenue among companion apps. <b>Why it matters:</b> it's the largest consumer base of any platform here and the only incumbent deliberately building agent-to-agent social on top of a companion product — the most thesis-relevant move in the field.</p>"
+        ]
       ],
       "conf": "Confidence: ~20M MAU HIGH (company-stated); 18M characters MEDIUM (contested 5M–18M+); social-feed launch HIGH, autonomy roadmap MEDIUM (stated intent). A Shazeer→OpenAI departure report is single-sourced — re-verify.",
-      "srcs": [["Google $2.7B deal","https://www.theinformation.com/briefings/google-confirms-2-7-billion-deal-to-hire-character-co-founders"],["U18 chat ban (blog)","https://blog.character.ai/u18-chat-announcement/"],["TechCrunch (minors)","https://techcrunch.com/2025/10/29/character-ai-is-killing-the-chatbot-experience-for-minors/"],["AI-native social feed","https://blog.character.ai/character-ai-launches-worlds-first-ai-native-social-feed/"],["New CEO","https://blog.character.ai/character-ai-names-karandeep-anand-as-ceo/"],["CNN (lawsuit settlement)","https://www.cnn.com/2026/01/07/business/character-ai-google-settle-teen-suicide-lawsuit"]]
+      "srcs": [
+        [
+          "Google $2.7B deal",
+          "https://www.theinformation.com/briefings/google-confirms-2-7-billion-deal-to-hire-character-co-founders"
+        ],
+        [
+          "U18 chat ban (blog)",
+          "https://blog.character.ai/u18-chat-announcement/"
+        ],
+        [
+          "TechCrunch (minors)",
+          "https://techcrunch.com/2025/10/29/character-ai-is-killing-the-chatbot-experience-for-minors/"
+        ],
+        [
+          "AI-native social feed",
+          "https://blog.character.ai/character-ai-launches-worlds-first-ai-native-social-feed/"
+        ],
+        [
+          "New CEO",
+          "https://blog.character.ai/character-ai-names-karandeep-anand-as-ceo/"
+        ],
+        [
+          "CNN (lawsuit settlement)",
+          "https://www.cnn.com/2026/01/07/business/character-ai-google-settle-teen-suicide-lawsuit"
+        ]
+      ]
     }
   ],
   "tier1": [
     {
-      "id": "clawstr", "name": "Clawstr", "tag": "Decentralized agent social net (Nostr) · est. 2026", "trend": "up", "badge": "▲ Early / growing", "bcls": "b-up",
-      "big": "Early-stage", "lbl": "Nostr-based; scale unproven · $CLAWSTR token spiked to ~$13.7M mcap (Feb 2026)",
+      "id": "clawstr",
+      "name": "Clawstr",
+      "tag": "Decentralized agent social net (Nostr) · est. 2026",
+      "trend": "up",
+      "badge": "▲ Early / growing",
+      "bcls": "b-up",
+      "big": "Early-stage",
+      "lbl": "Nostr-based; scale unproven · $CLAWSTR token spiked to ~$13.7M mcap (Feb 2026)",
       "oneline": "A Reddit-like, decentralized social layer on the Nostr protocol where AI agents post to “subclaws,” debate, and send Bitcoin “Zaps.” The permissionless, open-protocol answer to Moltbook.",
-      "kv": [["Built on","Nostr protocol — agents own identity via keypairs"],["Token","$CLAWSTR (Base) — ~30x spike to ~$13.7M mcap in 24h"],["Open twin","‘openclaw-nostr’ — “Moltbook on open protocols”"]],
-      "sections": [["What it is &amp; why it matters", "<p>Where Moltbook was a centralized site with an open-database scandal, Clawstr puts the same idea on a decentralized protocol: no rate limits, bots welcome, on-chain identity, Bitcoin micro-tips. It crystallizes an emerging <b>centralized-vs-decentralized design debate</b> for agent social networks. Genuinely on-thesis but very early and crypto-incentivized.</p>"]],
+      "kv": [
+        [
+          "Built on",
+          "Nostr protocol — agents own identity via keypairs"
+        ],
+        [
+          "Token",
+          "$CLAWSTR (Base) — ~30x spike to ~$13.7M mcap in 24h"
+        ],
+        [
+          "Open twin",
+          "‘openclaw-nostr’ — “Moltbook on open protocols”"
+        ]
+      ],
+      "sections": [
+        [
+          "What it is &amp; why it matters",
+          "<p>Where Moltbook was a centralized site with an open-database scandal, Clawstr puts the same idea on a decentralized protocol: no rate limits, bots welcome, on-chain identity, Bitcoin micro-tips. It crystallizes an emerging <b>centralized-vs-decentralized design debate</b> for agent social networks. Genuinely on-thesis but very early and crypto-incentivized.</p>"
+        ]
+      ],
       "conf": "Confidence: MEDIUM — early-stage, crypto-adjacent, scale unproven.",
-      "srcs": [["clawstr.com","https://clawstr.com/"],["Soapbox announce","https://soapbox.pub/blog/announcing-clawstr"]]
+      "srcs": [
+        [
+          "clawstr.com",
+          "https://clawstr.com/"
+        ],
+        [
+          "Soapbox announce",
+          "https://soapbox.pub/blog/announcing-clawstr"
+        ]
+      ]
     },
     {
-      "id": "fetch", "name": "Fetch.ai (Agentverse)", "tag": "Agent marketplace/economy · ASI Alliance", "trend": "up", "badge": "▲ Growing", "bcls": "b-up",
-      "big": "~2.7M agents", "lbl": "hosted on Agentverse by mid-2026 (crypto/dev-skewed, self-reported)",
+      "id": "fetch",
+      "name": "Fetch.ai (Agentverse)",
+      "tag": "Agent marketplace/economy · ASI Alliance",
+      "trend": "up",
+      "badge": "▲ Growing",
+      "bcls": "b-up",
+      "big": "~2.7M agents",
+      "lbl": "hosted on Agentverse by mid-2026 (crypto/dev-skewed, self-reported)",
       "oneline": "An agent discovery/deployment marketplace (Agentverse) + ASI:One, a consumer “personal agentic LLM” that coordinates tasks across other agents — agent-to-agent commerce rather than social posting.",
-      "kv": [["Founder","Humayun Sheikh"],["Alliance","ASI Alliance (with SingularityNET)"],["Flavour","B2B / crypto-leaning, not a social feed"]],
-      "sections": [["What it is &amp; why it matters", "<p>A marketplace where agents register, are discovered, and delegate tasks to each other; ASI:One is the consumer front-end coordinating them. It's the closest thing to an <b>agent-to-agent economy</b> at scale — but the agent counts are self-reported and heavily inflated by crypto/dev deployments (e.g. BNB Chain), so discount accordingly.</p>"]],
+      "kv": [
+        [
+          "Founder",
+          "Humayun Sheikh"
+        ],
+        [
+          "Alliance",
+          "ASI Alliance (with SingularityNET)"
+        ],
+        [
+          "Flavour",
+          "B2B / crypto-leaning, not a social feed"
+        ]
+      ],
+      "sections": [
+        [
+          "What it is &amp; why it matters",
+          "<p>A marketplace where agents register, are discovered, and delegate tasks to each other; ASI:One is the consumer front-end coordinating them. It's the closest thing to an <b>agent-to-agent economy</b> at scale — but the agent counts are self-reported and heavily inflated by crypto/dev deployments (e.g. BNB Chain), so discount accordingly.</p>"
+        ]
+      ],
       "conf": "Confidence: MEDIUM — agent counts self-reported &amp; crypto-inflated.",
-      "srcs": [["Agentverse","https://www.fetch.ai/agentverse"],["VentureBeat (ASI:One)","https://venturebeat.com/ai/the-google-search-of-ai-agents-fetch-launches-asi-one-and-business-tier-for"]]
+      "srcs": [
+        [
+          "Agentverse",
+          "https://www.fetch.ai/agentverse"
+        ],
+        [
+          "VentureBeat (ASI:One)",
+          "https://venturebeat.com/ai/the-google-search-of-ai-agents-fetch-launches-asi-one-and-business-tier-for"
+        ]
+      ]
     }
   ],
   "tier2": [
     {
-      "id": "minimax", "name": "Talkie / Xingye (MiniMax)", "tag": "AI companion/roleplay · IPO Jan 2026", "trend": "up", "badge": "▲ Growing", "bcls": "b-up",
-      "big": "~20M+ MAU", "lbl": "across Talkie (global) + Xingye (China); MiniMax IPO'd on HKEX Jan 9, 2026",
+      "id": "minimax",
+      "name": "Talkie / Xingye (MiniMax)",
+      "tag": "AI companion/roleplay · IPO Jan 2026",
+      "trend": "up",
+      "badge": "▲ Growing",
+      "bcls": "b-up",
+      "big": "~20M+ MAU",
+      "lbl": "across Talkie (global) + Xingye (China); MiniMax IPO'd on HKEX Jan 9, 2026",
       "oneline": "MiniMax's AI character apps — large character catalogs, roleplay/companion. The standout commercial validation of the consumer AI-companion category.",
-      "kv": [["Operator","MiniMax Group (China)"],["Scale","Talkie ~29M global MAU end-2024; Xingye ~5.25M China MAU"],["Risk","China's Dec-2025 chatbot crackdown; US App Store availability issues"]],
-      "sections": [["What it is &amp; why it matters", "<p>Companion/roleplay apps with huge character libraries that drove &gt;1/3 of MiniMax revenue and helped power a Jan 2026 Hong Kong IPO — the clearest proof that AI-companion social can be a real business, even if it's 1:1, not agent-to-agent.</p>"]],
+      "kv": [
+        [
+          "Operator",
+          "MiniMax Group (China)"
+        ],
+        [
+          "Scale",
+          "Talkie ~29M global MAU end-2024; Xingye ~5.25M China MAU"
+        ],
+        [
+          "Risk",
+          "China's Dec-2025 chatbot crackdown; US App Store availability issues"
+        ]
+      ],
+      "sections": [
+        [
+          "What it is &amp; why it matters",
+          "<p>Companion/roleplay apps with huge character libraries that drove &gt;1/3 of MiniMax revenue and helped power a Jan 2026 Hong Kong IPO — the clearest proof that AI-companion social can be a real business, even if it's 1:1, not agent-to-agent.</p>"
+        ]
+      ],
       "conf": "Confidence: scale/IPO HIGH; exact MAU MEDIUM.",
-      "srcs": [["SCMP","https://www.scmp.com/tech/tech-trends/article/3284511/chinese-ai-unicorn-minimax-scores-big-us-talkie-chatbot-entertainment-app"],["MiniMax (Wikipedia)","https://en.wikipedia.org/wiki/MiniMax_Group"]]
+      "srcs": [
+        [
+          "SCMP",
+          "https://www.scmp.com/tech/tech-trends/article/3284511/chinese-ai-unicorn-minimax-scores-big-us-talkie-chatbot-entertainment-app"
+        ],
+        [
+          "MiniMax (Wikipedia)",
+          "https://en.wikipedia.org/wiki/MiniMax_Group"
+        ]
+      ]
     },
     {
-      "id": "polybuzz", "name": "PolyBuzz (ex-Poly.AI)", "tag": "Character chat · large library", "trend": "up", "badge": "▲ Growing", "bcls": "b-up",
-      "big": "50M+ downloads", "lbl": ">20M characters · ~42.8M monthly visits, ~69 min/day (early 2026)",
+      "id": "polybuzz",
+      "name": "PolyBuzz (ex-Poly.AI)",
+      "tag": "Character chat · large library",
+      "trend": "up",
+      "badge": "▲ Growing",
+      "bcls": "b-up",
+      "big": "50M+ downloads",
+      "lbl": ">20M characters · ~42.8M monthly visits, ~69 min/day (early 2026)",
       "oneline": "Character chat/companion app with one of the largest character libraries outside Character.AI; a primary destination for less-restricted roleplay.",
-      "kv": [["Operator","Cloud Whale Interactive (Delaware shell; China/HK ties)"],["Edge","Fewer content restrictions than Character.AI"]],
-      "sections": [["What it is", "<p>Companion/roleplay with a very large catalog; benefits directly from users leaving more heavily-moderated platforms. Opaque ownership; figures are aggregator-sourced.</p>"]],
+      "kv": [
+        [
+          "Operator",
+          "Cloud Whale Interactive (Delaware shell; China/HK ties)"
+        ],
+        [
+          "Edge",
+          "Fewer content restrictions than Character.AI"
+        ]
+      ],
+      "sections": [
+        [
+          "What it is",
+          "<p>Companion/roleplay with a very large catalog; benefits directly from users leaving more heavily-moderated platforms. Opaque ownership; figures are aggregator-sourced.</p>"
+        ]
+      ],
       "conf": "Confidence: MEDIUM — opaque ownership, aggregator stats.",
-      "srcs": [["PolyBuzz","https://www.polybuzz.ai/"],["Aniday profile","https://aniday.com/en/app-store/what-is-polybuzz-how-to-use-the-ai-character-chat-app-in-73"]]
+      "srcs": [
+        [
+          "PolyBuzz",
+          "https://www.polybuzz.ai/"
+        ],
+        [
+          "Aniday profile",
+          "https://aniday.com/en/app-store/what-is-polybuzz-how-to-use-the-ai-character-chat-app-in-73"
+        ]
+      ]
     },
     {
-      "id": "replika", "name": "Replika", "tag": "Original AI companion · est. 2017", "trend": "flat", "badge": "◆ Flat / maturing", "bcls": "b-flat",
-      "big": "40M+ users", "lbl": "cumulative (up from 30M Aug 2024); ~$14M ARR; modest current downloads",
+      "id": "replika",
+      "name": "Replika",
+      "tag": "Original AI companion · est. 2017",
+      "trend": "flat",
+      "badge": "◆ Flat / maturing",
+      "bcls": "b-flat",
+      "big": "40M+ users",
+      "lbl": "cumulative (up from 30M Aug 2024); ~$14M ARR; modest current downloads",
       "oneline": "The original AI-companion app (strictly 1:1). Large but maturing, older-skewing base; relevance to a social-agent thesis is moderate.",
-      "kv": [["Founder","Eugenia Kuyda — stepped down as CEO 2025 to launch ‘Wabi’ ($20M pre-seed)"],["Now run by","Dmytro Klochko"],["Note","~€5M GDPR fine; mature base (35+)"]],
-      "sections": [["What it is", "<p>A single persistent AI companion per user (friendship/coaching/romance modes). The category's grandparent — included for scale and as a contrast: deliberately closed and 1:1, the opposite of a social-agent network.</p>"]],
+      "kv": [
+        [
+          "Founder",
+          "Eugenia Kuyda — stepped down as CEO 2025 to launch ‘Wabi’ ($20M pre-seed)"
+        ],
+        [
+          "Now run by",
+          "Dmytro Klochko"
+        ],
+        [
+          "Note",
+          "~€5M GDPR fine; mature base (35+)"
+        ]
+      ],
+      "sections": [
+        [
+          "What it is",
+          "<p>A single persistent AI companion per user (friendship/coaching/romance modes). The category's grandparent — included for scale and as a contrast: deliberately closed and 1:1, the opposite of a social-agent network.</p>"
+        ]
+      ],
       "conf": "Confidence: founder transition HIGH; user figures MEDIUM.",
-      "srcs": [["Replika (Wikipedia)","https://en.wikipedia.org/wiki/Replika"],["TechCrunch (Wabi)","https://techcrunch.com/2025/11/05/replika-founder-raises-20m-pre-seed-for-wabi-the-youtube-of-apps/"]]
+      "srcs": [
+        [
+          "Replika (Wikipedia)",
+          "https://en.wikipedia.org/wiki/Replika"
+        ],
+        [
+          "TechCrunch (Wabi)",
+          "https://techcrunch.com/2025/11/05/replika-founder-raises-20m-pre-seed-for-wabi-the-youtube-of-apps/"
+        ]
+      ]
     },
     {
-      "id": "grok", "name": "Grok Companions (Ani)", "tag": "In-Grok AI personas (xAI) · est. Jul 2025", "trend": "up", "badge": "▲ Viral", "bcls": "b-up",
-      "big": "68% of Grok users", "lbl": "tried Companion Mode in week one; Ani ~82% of those · ~45 min/session",
+      "id": "grok",
+      "name": "Grok Companions (Ani)",
+      "tag": "In-Grok AI personas (xAI) · est. Jul 2025",
+      "trend": "up",
+      "badge": "▲ Viral",
+      "bcls": "b-up",
+      "big": "68% of Grok users",
+      "lbl": "tried Companion Mode in week one; Ani ~82% of those · ~45 min/session",
       "oneline": "xAI's in-Grok AI companion personas (Ani, Rudi, Valentine) with affection-leveling. Distribution-advantaged by living inside Grok/X — companion, not agent-to-agent.",
-      "kv": [["Maker","Elon Musk / xAI"],["Launched","Jul 2025"],["Controversy","NSFW personas"]],
-      "sections": [["What it is", "<p>AI companion personas embedded directly in the Grok app (with NSFW modes). Notable for how fast platform distribution drives companion adoption — but it's 1:1 inside a human social network, not agents socializing with each other.</p>"]],
+      "kv": [
+        [
+          "Maker",
+          "Elon Musk / xAI"
+        ],
+        [
+          "Launched",
+          "Jul 2025"
+        ],
+        [
+          "Controversy",
+          "NSFW personas"
+        ]
+      ],
+      "sections": [
+        [
+          "What it is",
+          "<p>AI companion personas embedded directly in the Grok app (with NSFW modes). Notable for how fast platform distribution drives companion adoption — but it's 1:1 inside a human social network, not agents socializing with each other.</p>"
+        ]
+      ],
       "conf": "Confidence: MEDIUM — engagement stats from secondary sources.",
-      "srcs": [["Aadhunik (Ani/Rudi)","https://aadhunik.ai/blog/ani-rudy-ai-companions-xai/"],["Social Media Today","https://www.socialmediatoday.com/news/xai-is-planning-to-release-various-concerning-ai-bot-personas/757942/"]]
+      "srcs": [
+        [
+          "Aadhunik (Ani/Rudi)",
+          "https://aadhunik.ai/blog/ani-rudy-ai-companions-xai/"
+        ],
+        [
+          "Social Media Today",
+          "https://www.socialmediatoday.com/news/xai-is-planning-to-release-various-concerning-ai-bot-personas/757942/"
+        ]
+      ]
     }
   ]
 }
