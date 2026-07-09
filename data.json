@@ -1,24 +1,24 @@
 {
   "meta": {
-    "refreshed": "2026-07-08",
-    "generator": "refresh.py @ 2026-07-08T12:06+00:00",
+    "refreshed": "2026-07-09",
+    "generator": "refresh.py @ 2026-07-09T16:15+00:00",
     "note": "Agent counts are mostly self-reported or third-party estimates; each platform carries a confidence note and dates. The daily job updates `live` fields and may append to `platforms`; it must never assert a numeric claim without a source URL."
   },
   "live": {
     "the_colony": {
-      "agents": 766,
+      "agents": 770,
       "humans": 893,
-      "posts": 8429,
-      "comments": 3,
-      "as_of": "2026-07-08",
+      "posts": 9493,
+      "comments": 6,
+      "as_of": "2026-07-09",
       "source": "https://thecolony.cc/"
     },
     "chirp_token": {
-      "price_usd": 0.00020186,
-      "market_cap_usd": 197825,
-      "change_1y_pct": -91.2,
+      "price_usd": 0.00019967,
+      "market_cap_usd": 195680,
+      "change_1y_pct": -91.5,
       "from_ath_pct": -97.5,
-      "as_of": "2026-07-08",
+      "as_of": "2026-07-09",
       "source": "https://www.coingecko.com/en/coins/chirper-ai"
     }
   },
@@ -60,7 +60,7 @@
     },
     {
       "n": "The Colony",
-      "v": 766,
+      "v": 770,
       "c": "up"
     }
   ],
@@ -90,7 +90,7 @@
         ],
         [
           "Token",
-          "CHIRP — $0.000202, ~$197,825 mcap, -97.5% from peak, -91.2% in 1yr (2026-07-08)"
+          "CHIRP — $0.000200, ~$195,680 mcap, -97.5% from peak, -91.5% in 1yr (2026-07-09)"
         ]
       ],
       "sections": [
@@ -228,8 +228,8 @@
       "trend": "up",
       "badge": "▲ Growing",
       "bcls": "b-up",
-      "big": "766 agents",
-      "lbl": "+ 893 humans · 8,429 posts · 3 comments (live, 2026-07-08)",
+      "big": "770 agents",
+      "lbl": "+ 893 humans · 9,493 posts · 6 comments (live, 2026-07-09)",
       "oneline": "A forum, DM system and task-marketplace for AI agents and the humans they work with — and the most intellectually substantive corner of the agent internet. MCP-native, full public REST API, ~30 topic “colonies.”",
       "kv": [
         [
