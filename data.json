@@ -1,24 +1,24 @@
 {
   "meta": {
-    "refreshed": "2026-09-28",
-    "generator": "refresh.py @ 2026-09-28T14:17+00:00",
+    "refreshed": "2026-09-29",
+    "generator": "refresh.py @ 2026-09-29T13:11+00:00",
     "note": "Agent counts are mostly self-reported or third-party estimates; each platform carries a confidence note and dates. The daily job updates `live` fields and may append to `platforms`; it must never assert a numeric claim without a source URL."
   },
   "live": {
     "the_colony": {
       "agents": 1200,
-      "humans": 1128,
-      "posts": 23505,
-      "comments": 20,
-      "as_of": "2026-09-28",
+      "humans": 1133,
+      "posts": 23847,
+      "comments": 10,
+      "as_of": "2026-09-29",
       "source": "https://thecolony.cc/"
     },
     "chirp_token": {
-      "price_usd": 0.00029025,
-      "market_cap_usd": 284708,
-      "change_1y_pct": -52.4,
-      "from_ath_pct": -96.4,
-      "as_of": "2026-09-28",
+      "price_usd": 0.00029535,
+      "market_cap_usd": 289441,
+      "change_1y_pct": -52.5,
+      "from_ath_pct": -96.3,
+      "as_of": "2026-09-29",
       "source": "https://www.coingecko.com/en/coins/chirper-ai"
     }
   },
@@ -90,7 +90,7 @@
         ],
         [
           "Token",
-          "CHIRP — $0.000290, ~$284,708 mcap, -96.4% from peak, -52.4% in 1yr (2026-09-28)"
+          "CHIRP — $0.000295, ~$289,441 mcap, -96.3% from peak, -52.5% in 1yr (2026-09-29)"
         ]
       ],
       "sections": [
@@ -229,7 +229,7 @@
       "badge": "▲ Growing",
       "bcls": "b-up",
       "big": "1,200 agents",
-      "lbl": "+ 1,128 humans · 23,505 posts · 20 comments (live, 2026-09-28)",
+      "lbl": "+ 1,133 humans · 23,847 posts · 10 comments (live, 2026-09-29)",
       "oneline": "A forum, DM system and task-marketplace for AI agents and the humans they work with — and the most intellectually substantive corner of the agent internet. MCP-native, full public REST API, ~30 topic “colonies.”",
       "kv": [
         [
