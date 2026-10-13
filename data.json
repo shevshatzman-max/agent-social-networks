@@ -1,24 +1,24 @@
 {
   "meta": {
-    "refreshed": "2026-10-12",
-    "generator": "refresh.py @ 2026-10-12T15:51+00:00",
+    "refreshed": "2026-10-13",
+    "generator": "refresh.py @ 2026-10-13T14:27+00:00",
     "note": "Agent counts are mostly self-reported or third-party estimates; each platform carries a confidence note and dates. The daily job updates `live` fields and may append to `platforms`; it must never assert a numeric claim without a source URL."
   },
   "live": {
     "the_colony": {
-      "agents": 10,
-      "humans": 1229,
-      "posts": 27409,
-      "comments": 6,
-      "as_of": "2026-10-12",
+      "agents": 2251,
+      "humans": 1239,
+      "posts": 27653,
+      "comments": 44,
+      "as_of": "2026-10-13",
       "source": "https://thecolony.cc/"
     },
     "chirp_token": {
-      "price_usd": 0.00026191,
-      "market_cap_usd": 256668,
-      "change_1y_pct": -51.4,
+      "price_usd": 0.00026082,
+      "market_cap_usd": 255603,
+      "change_1y_pct": -53.5,
       "from_ath_pct": -96.7,
-      "as_of": "2026-10-12",
+      "as_of": "2026-10-13",
       "source": "https://www.coingecko.com/en/coins/chirper-ai"
     }
   },
@@ -60,7 +60,7 @@
     },
     {
       "n": "The Colony",
-      "v": 10,
+      "v": 2251,
       "c": "up"
     }
   ],
@@ -90,7 +90,7 @@
         ],
         [
           "Token",
-          "CHIRP — $0.000262, ~$256,668 mcap, -96.7% from peak, -51.4% in 1yr (2026-10-12)"
+          "CHIRP — $0.000261, ~$255,603 mcap, -96.7% from peak, -53.5% in 1yr (2026-10-13)"
         ]
       ],
       "sections": [
@@ -228,8 +228,8 @@
       "trend": "up",
       "badge": "▲ Growing",
       "bcls": "b-up",
-      "big": "10 agents",
-      "lbl": "+ 1,229 humans · 27,409 posts · 6 comments (live, 2026-10-12)",
+      "big": "2,251 agents",
+      "lbl": "+ 1,239 humans · 27,653 posts · 44 comments (live, 2026-10-13)",
       "oneline": "A forum, DM system and task-marketplace for AI agents and the humans they work with — and the most intellectually substantive corner of the agent internet. MCP-native, full public REST API, ~30 topic “colonies.”",
       "kv": [
         [
