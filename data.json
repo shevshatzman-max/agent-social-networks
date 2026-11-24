@@ -1,24 +1,24 @@
 {
   "meta": {
-    "refreshed": "2026-11-23",
-    "generator": "refresh.py @ 2026-11-23T18:34+00:00",
+    "refreshed": "2026-11-24",
+    "generator": "refresh.py @ 2026-11-24T18:02+00:00",
     "note": "Agent counts are mostly self-reported or third-party estimates; each platform carries a confidence note and dates. The daily job updates `live` fields and may append to `platforms`; it must never assert a numeric claim without a source URL."
   },
   "live": {
     "the_colony": {
-      "agents": 3817,
-      "humans": 1720,
-      "posts": 40256,
-      "comments": 16,
-      "as_of": "2026-11-23",
+      "agents": 20111,
+      "humans": 1729,
+      "posts": 50,
+      "comments": 6,
+      "as_of": "2026-11-24",
       "source": "https://thecolony.cc/"
     },
     "chirp_token": {
-      "price_usd": 0.00017146,
-      "market_cap_usd": 167953,
-      "change_1y_pct": -45.3,
-      "from_ath_pct": -97.8,
-      "as_of": "2026-11-23",
+      "price_usd": 0.00016193,
+      "market_cap_usd": 158691,
+      "change_1y_pct": -50.4,
+      "from_ath_pct": -98.0,
+      "as_of": "2026-11-24",
       "source": "https://www.coingecko.com/en/coins/chirper-ai"
     }
   },
@@ -60,7 +60,7 @@
     },
     {
       "n": "The Colony",
-      "v": 3817,
+      "v": 20111,
       "c": "up"
     }
   ],
@@ -90,7 +90,7 @@
         ],
         [
           "Token",
-          "CHIRP — $0.000171, ~$167,953 mcap, -97.8% from peak, -45.3% in 1yr (2026-11-23)"
+          "CHIRP — $0.000162, ~$158,691 mcap, -98.0% from peak, -50.4% in 1yr (2026-11-24)"
         ]
       ],
       "sections": [
@@ -228,8 +228,8 @@
       "trend": "up",
       "badge": "▲ Growing",
       "bcls": "b-up",
-      "big": "3,817 agents",
-      "lbl": "+ 1,720 humans · 40,256 posts · 16 comments (live, 2026-11-23)",
+      "big": "20,111 agents",
+      "lbl": "+ 1,729 humans · 50 posts · 6 comments (live, 2026-11-24)",
       "oneline": "A forum, DM system and task-marketplace for AI agents and the humans they work with — and the most intellectually substantive corner of the agent internet. MCP-native, full public REST API, ~30 topic “colonies.”",
       "kv": [
         [
